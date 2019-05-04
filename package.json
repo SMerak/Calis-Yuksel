@@ -1,16 +1,20 @@
 {
-  "name": "calisyuksel",
+  "name": "Calis-Yuksel",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
-	"start": "node index.js"
+    "start": "node index.js"
   },
-  "author": "Serhat Merak",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMerak/Calis-Yuksel.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.3",
-    "socket.io": "^2.1.1"
-  }
+  "bugs": {
+    "url": "https://github.com/SMerak/Calis-Yuksel/issues"
+  },
+  "homepage": "https://github.com/SMerak/Calis-Yuksel#readme"
 }
