@@ -18,6 +18,11 @@ io.on('connection', function(socket){
 			socket.emit("setIlker",{yukseklik : data.toString()});
 		});
 		
+		fs.readFile("burak", function(error, data){
+			console.log(data.toString());
+			socket.emit("setBurak",{yukseklik : data.toString()});
+		});
+		
 		fs.readFile("serhat", function(error, data){
 			console.log(data.toString());
 			socket.emit("setSerhat",{yukseklik : data.toString()});
@@ -58,6 +63,13 @@ io.on('connection', function(socket){
 		});
 	});
 	
+	socket.on("setBurak",function(data){
+		fs.writeFile("burak",data.toString(),function (err) {
+			if(err) throw err;
+			console.log("Burak'ın kulesi = " + data.toString());
+		});
+	});
+	
 	socket.on("setIlker",function(data){
 		fs.writeFile("ilker",data.toString(),function (err) {
 			if(err) throw err;
@@ -69,6 +81,4 @@ io.on('connection', function(socket){
 		console.log("Player Disconnected");
 	});
 });
-
-
 	
